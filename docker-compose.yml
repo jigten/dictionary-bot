@@ -11,6 +11,8 @@ services:
   api:
     container_name: api
     build: .
+    env_file:
+      - dictionarybot/.env
     command: python manage.py runserver 0.0.0.0:8001
     expose:
       - 8001
